@@ -98,11 +98,11 @@ function deleteWork() {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${userToken}`,
-          "Content-Type": "application/json",
         },
         mode: "cors",
         credentials: "same-origin",
       }).then(() => {
+        console.log("passe par ici");
         getWorks().then((works) => {
           gallery.innerHTML = "";
           galleryModal.innerHTML = "";
