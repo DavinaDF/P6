@@ -221,7 +221,7 @@ nav .selected {
 .gallery img {
 	width: 100%;
 	height: 100%;
-
+	object-fit: cover;
 }
 .gallery figcaption {
 	margin: 10px 0;
@@ -234,7 +234,6 @@ nav .selected {
 }
 #contact > * {
 	text-align: center;
-
 }
 #contact h2{
 	margin-bottom: 20px;
