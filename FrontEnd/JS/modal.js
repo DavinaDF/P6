@@ -28,6 +28,7 @@ function openModal(e) {
     displayWorksModal(works);
   });
 }
+
 // Fonction fermeture de la modal
 function closeModal(e) {
   e.preventDefault();
@@ -64,6 +65,7 @@ backgroundModal.addEventListener("click", function (e) {
     closeModal(e);
   }
 });
+
 formAddWork.addEventListener("submit", addNewWork);
 
 function displayWorksModal(works) {
@@ -134,6 +136,7 @@ async function displayCategoryModal() {
     select.appendChild(option);
   });
 }
+
 displayCategoryModal();
 
 // ------------------------- //
@@ -154,6 +157,7 @@ function previewImg() {
     }
   });
 }
+
 previewImg();
 
 function checkForm() {
@@ -172,6 +176,7 @@ function checkForm() {
     }
   });
 }
+
 checkForm();
 
 // Fonction ajout travaux dans API
@@ -188,7 +193,10 @@ function addNewWork() {
   }).then(() => {
     getWorks().then((works) => {
       galleryModal.innerHTML = "";
+      gallery.innerHTML = "";
       displayWorksModal(works);
+      displayWorks(works, 0);
+      console.log("display ok");
     });
   });
 }
