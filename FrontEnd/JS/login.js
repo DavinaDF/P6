@@ -3,7 +3,7 @@ const email = document.getElementById("email");
 const password = document.getElementById("mdp");
 let arrayUserData;
 
-// Quand on submit
+// Validation du formulaire au clic sur le bouton "connexion"
 form.addEventListener("submit", (event) => {
   // On empêche le comportement par défaut
   event.preventDefault();

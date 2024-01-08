@@ -37,7 +37,6 @@ GetCategories().then(() => {
 async function getWorks() {
   const reponse = await fetch("http://localhost:5678/api/works");
   const works = await reponse.json();
-  console.log(works);
   return works;
 }
 
@@ -107,7 +106,6 @@ function displayLoginMode() {
   if (userId) {
     headerAdmin.style.display = null;
     portfolioAdmin.style.display = null;
-    console.log(filters);
     filters.style.display = "none";
     document.getElementById("nav_login").href = "index.html";
     document.getElementById("nav_login").innerHTML = "logout";
